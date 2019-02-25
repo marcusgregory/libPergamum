@@ -2,18 +2,18 @@
 
 Um projeto pessoal criando para acessar o [Sistema Pergamum](http://bibweb.unilab.edu.br) e o [Sistema SIGAA](https://sig.unilab.edu.br) da [Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)](http://unilab.edu.br/)
 
-# Dependências:
+## Dependências:
 |JAR                 |Link                                                                                                 |
 |--------------------|-----------------------------------------------------------------------------------------------------|
 |*jsoup-1.10.3.jar*  |[Download JAR](https://jsoup.org/packages/jsoup-1.10.3.jar)                                          |
 |*gson-2.8.4.jar*    |[Visitar Website](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.4)                |
 
-## Inicializar
+## Inicializar:
 
 ```java
 Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
 ```
-## Login no SIGAA
+## Login no SIGAA:
 
 ```java
  UsuarioSIGAA usuarioSigaa;
@@ -25,7 +25,7 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
         }
 ```
 
-## Login no Pergamum
+## Login no Pergamum:
 
 ```java
  UsuarioBiblioteca usuarioPergamum;
