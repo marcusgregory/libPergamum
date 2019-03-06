@@ -6,7 +6,7 @@ Um projeto pessoal criando para acessar o [Sistema Pergamum](http://bibweb.unila
 |JAR                 |Link                                                                                                 |
 |--------------------|-----------------------------------------------------------------------------------------------------|
 |*jsoup-1.10.3.jar*  |[Download JAR](https://jsoup.org/packages/jsoup-1.10.3.jar)                                          |
-|*gson-2.8.4.jar*    |[Visitar Website](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.4)                |
+|*gson-2.8.4.jar*    |[Download JAR](http://central.maven.org/maven2/com/google/code/gson/gson/2.8.4/gson-2.8.4.jar)                |
 
 ## Inicializar:
 
