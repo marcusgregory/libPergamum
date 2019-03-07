@@ -5,6 +5,7 @@
  */
 package br.com.marcusgregory.libpergamum.sigaa.requests;
 
+import br.com.marcusgregory.libpergamum.exceptions.ErroDesconhecidoLoginException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioNaoLogadoException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioSenhaIncorretosException;
 import br.com.marcusgregory.libpergamum.requests.RequestLoginSIGAA;
@@ -29,7 +30,7 @@ import org.jsoup.select.Elements;
 public class RequestTurmas {
     private static Object response;
     private static int flagTentativa;
-    public static ResponseTurmas request() throws UsuarioNaoLogadoException, IOException, UsuarioSenhaIncorretosException {
+    public static ResponseTurmas request() throws UsuarioNaoLogadoException, IOException, UsuarioSenhaIncorretosException, ErroDesconhecidoLoginException {
         Thread AtestMat = new Thread(new AtestMat());
         AtestMat.start();
         Connection.Response turmas = RequestResponse();

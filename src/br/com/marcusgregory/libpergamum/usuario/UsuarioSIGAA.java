@@ -5,6 +5,7 @@
  */
 package br.com.marcusgregory.libpergamum.usuario;
 
+import br.com.marcusgregory.libpergamum.exceptions.ErroDesconhecidoLoginException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioNaoLogadoException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioSenhaIncorretosException;
 import br.com.marcusgregory.libpergamum.sigaa.ResponseTurmas;
@@ -41,7 +42,7 @@ public class UsuarioSIGAA {
         }
     }
 
-    public ResponseTurmas turmas() throws UsuarioNaoLogadoException, IOException, UsuarioSenhaIncorretosException {
+    public ResponseTurmas turmas() throws UsuarioNaoLogadoException, IOException, UsuarioSenhaIncorretosException, ErroDesconhecidoLoginException {
         return RequestTurmas.request();
     }
 

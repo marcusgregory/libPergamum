@@ -35,7 +35,7 @@ public class Sistema {
         return RequestLogin.request(this);
     }
 
-    public UsuarioSIGAA logarSIGAA() throws IOException, UsuarioSenhaIncorretosException {
+    public UsuarioSIGAA logarSIGAA() throws IOException, UsuarioSenhaIncorretosException, ErroDesconhecidoLoginException {
         return RequestLoginSIGAA.request(this);
     }
 

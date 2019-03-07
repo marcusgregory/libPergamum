@@ -1,5 +1,6 @@
 package br.com.marcusgregory.libpergamum.requests;
 
+import br.com.marcusgregory.libpergamum.exceptions.ErroDesconhecidoLoginException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioSenhaIncorretosException;
 import br.com.marcusgregory.libpergamum.usuario.Sistema;
 import br.com.marcusgregory.libpergamum.usuario.UsuarioSIGAA;
@@ -20,7 +21,7 @@ public class RequestLoginSIGAA {
     private static final String url1 = "https://sig.unilab.edu.br/sigaa/logar.do?dispatch=logOn";
     private static final String url2 = "https://sig.unilab.edu.br/sigaa/mobile/touch/menu.jsf";
     
-    public static UsuarioSIGAA request(Sistema sistema) throws IOException, UsuarioSenhaIncorretosException {
+    public static UsuarioSIGAA request(Sistema sistema) throws IOException, UsuarioSenhaIncorretosException, ErroDesconhecidoLoginException {
         
         Logger.log("Preparando login...");
         Logger.log("Enviando GET para https://sig.unilab.edu.br/sigaa/mobile/touch/login.jsf");
@@ -48,6 +49,12 @@ public class RequestLoginSIGAA {
                     .userAgent("Mozilla/5.0")
                     .execute();
             Logger.log("HTTP status="+execute2.statusCode()+" "+execute2.statusMessage());
+            if (execute2.cookie("JSESSIONID") == null || execute2.cookie("JSESSIONID").isEmpty()) {
+               ErroDesconhecidoLoginException erroDesconhecido = new ErroDesconhecidoLoginException("Ocorreu um erro inesperado no servidor");
+               Logger.logError(erroDesconhecido);
+               throw erroDesconhecido;
+                
+            }
             String cookie = execute2.cookie("JSESSIONID");
             Logger.log("Obteve o cookie: JSESSIONID=" + cookie);
             Logger.log("Enviando GET para https://sig.unilab.edu.br/sigaa/portais/discente/discente.jsf");
