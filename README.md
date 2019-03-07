@@ -16,13 +16,13 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
 ## Login no SIGAA:
 
 ```java
- UsuarioSIGAA usuarioSigaa;
+   UsuarioSIGAA usuarioSigaa;
         try {
             usuarioSigaa = sistema.logarSIGAA();
             usuarioSigaa.toString();
-        } catch (IOException | UsuarioSenhaIncorretosException ex) {
+        } catch (IOException | UsuarioSenhaIncorretosException | ErroDesconhecidoLoginException ex) {
             System.err.println(ex);
-        }
+        } 
 ```
 
 ## Login no Pergamum:
