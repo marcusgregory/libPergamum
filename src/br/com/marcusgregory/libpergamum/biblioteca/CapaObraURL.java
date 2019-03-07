@@ -26,7 +26,7 @@ public class CapaObraURL {
     public static String getCapaByCodAcervo(String CodAcervo) {
         if (CapaObraURL.isEmpty()) {
             Gson gson = new GsonBuilder().create();
-            Reader reader = new InputStreamReader(CapaObraURL.class.getResourceAsStream("/br/com/libpergamum/resources/CapaObraURL.json"));
+            Reader reader = new InputStreamReader(CapaObraURL.class.getResourceAsStream("/br/com/marcusgregory/libpergamum/resources/CapaObraURL.json"));
             CapaObraURL = gson.fromJson(reader, CapaObraURL.getClass());
         }
         return CapaObraURL.get(CodAcervo);
