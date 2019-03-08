@@ -13,6 +13,7 @@ import java.io.IOException;
  * @author Gregory
  */
 public class Turma {
+
     private String codigo;
     private String nomeTurma;
     private String docente;
@@ -67,16 +68,14 @@ public class Turma {
     public void setIdTurma(String idTurma) {
         this.idTurma = idTurma;
     }
-public ResponseAulas aulas() throws IOException, Exception{
-   return RequestAulas.request(this.idTurma);
-}
+
+    public ResponseAulas aulas() throws IOException, Exception {
+        return RequestAulas.request(this.idTurma);
+    }
+
     @Override
     public String toString() {
         return "Turma{" + "codigo=" + codigo + ", nomeTurma=" + nomeTurma + ", docente=" + docente + ", local=" + local + ", horario=" + horario + ", idTurma=" + idTurma + '}';
     }
-
-    
-
-   
 
 }

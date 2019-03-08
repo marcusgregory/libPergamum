@@ -5,7 +5,6 @@
  */
 package br.com.marcusgregory.libpergamum.biblioteca.emprestimo;
 
-import br.com.marcusgregory.libpergamum.biblioteca.consulta.ObraConsulta;
 import java.util.ArrayList;
 import java.util.List;
 

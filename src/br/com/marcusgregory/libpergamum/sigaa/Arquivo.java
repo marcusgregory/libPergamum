@@ -10,6 +10,7 @@ package br.com.marcusgregory.libpergamum.sigaa;
  * @author Gregory
  */
 public class Arquivo {
+
     private String nomeArquivo;
     private int tamanho;
     private byte[] bytes;
@@ -43,6 +44,4 @@ public class Arquivo {
         return "Arquivo{" + "nomeArquivo=" + nomeArquivo + ", tamanho=" + tamanho + '}';
     }
 
-    
-    
 }

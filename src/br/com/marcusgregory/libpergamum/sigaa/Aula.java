@@ -18,7 +18,7 @@ public class Aula {
     private ArrayList<Documento> documentos;
 
     public Aula() {
-     this.documentos = new ArrayList<>();
+        this.documentos = new ArrayList<>();
     }
 
     public String getTitulo() {
@@ -53,5 +53,5 @@ public class Aula {
     public String toString() {
         return "Aula{" + "titulo=" + titulo + ", conteudo=" + conteudo + ", documentos=" + documentos + '}';
     }
-    
+
 }

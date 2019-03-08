@@ -8,8 +8,6 @@ package br.com.marcusgregory.libpergamum.util;
 import br.com.marcusgregory.libpergamum.biblioteca.reserva.ObraReserva;
 import br.com.marcusgregory.libpergamum.biblioteca.reserva.Situacao;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  *

@@ -12,10 +12,11 @@ import java.util.ArrayList;
  * @author Gregory
  */
 public class ResponseAulas {
+
     private ArrayList<Aula> aulas;
 
     public ResponseAulas() {
-        this.aulas= new ArrayList<>();
+        this.aulas = new ArrayList<>();
     }
 
     public ArrayList<Aula> getAulas() {
@@ -25,7 +26,8 @@ public class ResponseAulas {
     public void setAulas(ArrayList<Aula> aulas) {
         this.aulas = aulas;
     }
-    public void addAula(Aula aula){
+
+    public void addAula(Aula aula) {
         this.aulas.add(aula);
     }
 
@@ -33,5 +35,5 @@ public class ResponseAulas {
     public String toString() {
         return "ResponseAulas{" + "aulas=" + aulas + '}';
     }
-    
+
 }

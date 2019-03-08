@@ -14,7 +14,7 @@ import java.io.IOException;
  * @author Gregory
  */
 public class Documento {
-    
+
     private String nome;
     private String id;
     private String formAva;
@@ -26,7 +26,6 @@ public class Documento {
     public void setId(String id) {
         this.id = id;
     }
-
 
     public String getNome() {
         return nome;
@@ -43,14 +42,14 @@ public class Documento {
     public void setFormAva(String formAva) {
         this.formAva = formAva;
     }
-   public Arquivo download() throws IOException, UsuarioNaoLogadoException{
-       return RequestDownloadArquivo.request(this);
-   }
+
+    public Arquivo download() throws IOException, UsuarioNaoLogadoException {
+        return RequestDownloadArquivo.request(this);
+    }
+
     @Override
     public String toString() {
         return "Documento{" + "nome=" + nome + ", id=" + id + ", formAva=" + formAva + '}';
     }
-
-  
 
 }

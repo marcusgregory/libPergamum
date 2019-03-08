@@ -29,7 +29,7 @@ public class RequestAulas {
                 .cookie("JSESSIONID", UsuarioSIGAA.getUsuarioSIGAAAtual().getCookie())
                 .userAgent("Mozilla/5.0")
                 .execute();
-      
+
         Connection.Response execute2 = Jsoup.connect("https://sig.unilab.edu.br/sigaa/portais/discente/discente.jsf")
                 .method(Connection.Method.POST).followRedirects(false)
                 .header("Referer", "https://sig.unilab.edu.br/sigaa/portais/discente/discente.jsf")
@@ -49,13 +49,13 @@ public class RequestAulas {
             Elements arquivos = topico.select("div[id*=conteudo] > span[id*=listaMateriais]");
             for (Element arquivo : arquivos) {
                 Documento doc = new Documento();
-                Elements arquivo1=arquivo.select("div[id*=listaMateriais]> span[id]:has(a[id*=idInserirMaterialArquivo]) > a");
+                Elements arquivo1 = arquivo.select("div[id*=listaMateriais]> span[id]:has(a[id*=idInserirMaterialArquivo]) > a");
                 doc.setNome(arquivo1.text().trim());
                 doc.setFormAva(arquivo1.attr("id"));
                 doc.setId(Regex.idDoc(arquivo1.attr("onclick")));
-                if(!(doc.getNome()==null||doc.getId()==null)) {
+                if (!(doc.getNome() == null || doc.getId() == null)) {
                     aula.addDocumento(doc);
-                } 
+                }
             }
             rspa.addAula(aula);
 

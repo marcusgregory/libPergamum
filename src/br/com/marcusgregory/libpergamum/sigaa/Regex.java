@@ -24,6 +24,7 @@ public class Regex {
         }
 
     }
+
     public static String idDoc(String script) {
         Pattern pattern = Pattern.compile("idInserirMaterialArquivo','id':'([0-9]+?)'");
         Matcher comparator = pattern.matcher(script);

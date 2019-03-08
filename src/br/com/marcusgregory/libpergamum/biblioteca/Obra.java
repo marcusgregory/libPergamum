@@ -8,7 +8,6 @@ package br.com.marcusgregory.libpergamum.biblioteca;
 import br.com.marcusgregory.libpergamum.exceptions.ReservaException;
 import br.com.marcusgregory.libpergamum.exceptions.UsuarioNaoLogadoException;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  *
