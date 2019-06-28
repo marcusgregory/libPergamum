@@ -1,6 +1,6 @@
 # libPergamum
 
-Uma biblioteca pessoal criada para acessar o [Sistema Pergamum](http://bibweb.unilab.edu.br) e o [Sistema SIGAA](https://sig.unilab.edu.br) da [Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)](http://unilab.edu.br/)
+Uma biblioteca pessoal em desenvolvimento, criada para acessar o [Sistema Pergamum](http://bibweb.unilab.edu.br) e o [Sistema SIGAA](https://sig.unilab.edu.br) da [Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)](http://unilab.edu.br/)
 
 ## Dependências:
 |lib                 |Download                                                                                                 |
