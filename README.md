@@ -19,7 +19,7 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
    UsuarioSIGAA usuarioSigaa;
         try {
             usuarioSigaa = sistema.logarSIGAA();
-            usuarioSigaa.toString();
+            System.out.println(usuarioSigaa.toString());
         } catch (IOException | UsuarioSenhaIncorretosException | ErroDesconhecidoLoginException ex) {
             System.err.println(ex);
         } 
@@ -31,7 +31,7 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
  UsuarioBiblioteca usuarioPergamum;
         try {
             usuarioPergamum = sistema.logar();
-            usuarioPergamum.toString();
+            System.out.println(usuarioPergamum.toString());
         } catch (UsuarioSenhaIncorretosException | IOException | ErroDesconhecidoLoginException ex) {
             System.err.println(ex);
         }
