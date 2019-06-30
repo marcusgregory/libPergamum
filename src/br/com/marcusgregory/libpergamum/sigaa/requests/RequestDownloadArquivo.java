@@ -64,7 +64,7 @@ public class RequestDownloadArquivo {
             arq.setTamanho(contentLength);
             arq.setBytes(execute.bodyAsBytes());
 
-            Logger.log("Arquivo baixado");
+            
             return arq;
         } else {
             Logger.log("Não foi possivel realizar o download. Servidor retornou HTTP code: " + execute.statusCode());

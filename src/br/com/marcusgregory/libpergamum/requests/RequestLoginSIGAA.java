@@ -7,7 +7,6 @@ import br.com.marcusgregory.libpergamum.usuario.UsuarioSIGAA;
 import br.com.marcusgregory.libpergamum.util.Logger;
 import java.io.IOException;
 import org.jsoup.Connection;
-import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 
@@ -17,9 +16,9 @@ import org.jsoup.nodes.Element;
  */
 public class RequestLoginSIGAA {
     
-    private static final String host = "https://sig.unilab.edu.br";
-    private static final String url1 = "https://sig.unilab.edu.br/sigaa/logar.do?dispatch=logOn";
-    private static final String url2 = "https://sig.unilab.edu.br/sigaa/mobile/touch/menu.jsf";
+    private static final String HOST = "https://sig.unilab.edu.br";
+    private static final String URL1 = "https://sig.unilab.edu.br/sigaa/logar.do?dispatch=logOn";
+    private static final String URL2 = "https://sig.unilab.edu.br/sigaa/mobile/touch/menu.jsf";
     
     public static UsuarioSIGAA request(Sistema sistema) throws IOException, UsuarioSenhaIncorretosException, ErroDesconhecidoLoginException {
         
@@ -30,7 +29,7 @@ public class RequestLoginSIGAA {
         try {
             Connection.Response execute = Jsoup.connect("https://sig.unilab.edu.br/sigaa/mobile/touch/login.jsf")
                     .method(Connection.Method.GET)
-                    .userAgent("Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0")
+                    .userAgent("Mozilla/5.0")
                     .execute();
             Logger.log("HTTP status="+execute.statusCode()+" "+execute.statusMessage());
             String formLoginUsuario = execute.parse().select("input[type=text]").attr("name");

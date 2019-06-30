@@ -25,7 +25,7 @@ public class RequestAulas {
 
     public static ResponseAulas request(String id) throws UsuarioNaoLogadoException, IOException, Exception {
         Connection.Response execute1 = Jsoup.connect("https://sig.unilab.edu.br/sigaa/portais/discente/discente.jsf")
-                .method(Connection.Method.GET)
+                .method(Connection.Method.HEAD)
                 .cookie("JSESSIONID", UsuarioSIGAA.getUsuarioSIGAAAtual().getCookie())
                 .userAgent("Mozilla/5.0")
                 .execute();
@@ -45,7 +45,7 @@ public class RequestAulas {
         for (Element topico : topicos) {
             Aula aula = new Aula();
             aula.setTitulo(topico.select(".titulo").text().trim());
-            aula.setConteudo(topico.select(".conteudotopico > p,ul").html());
+            aula.setConteudo(topico.select(".conteudotopico > p,ul").text().replace("   ", "\n"));
             Elements arquivos = topico.select("div[id*=conteudo] > span[id*=listaMateriais]");
             for (Element arquivo : arquivos) {
                 Documento doc = new Documento();
