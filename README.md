@@ -1,6 +1,6 @@
 # libPergamum
 
-Um projeto pessoal criando para acessar o [Sistema Pergamum](http://bibweb.unilab.edu.br) e o [Sistema SIGAA](https://sig.unilab.edu.br) da [Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)](http://unilab.edu.br/)
+Uma biblioteca pessoal em desenvolvimento, criada para acessar o [Sistema Pergamum](http://bibweb.unilab.edu.br) e o [Sistema SIGAA](https://sig.unilab.edu.br) da [Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)](http://unilab.edu.br/)
 
 ## Dependências:
 |lib                 |Download                                                                                                 |
@@ -19,7 +19,7 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
    UsuarioSIGAA usuarioSigaa;
         try {
             usuarioSigaa = sistema.logarSIGAA();
-            usuarioSigaa.toString();
+            System.out.println(usuarioSigaa.toString());
         } catch (IOException | UsuarioSenhaIncorretosException | ErroDesconhecidoLoginException ex) {
             System.err.println(ex);
         } 
@@ -31,7 +31,7 @@ Sistema sistema = new Sistema("UsuarioSIG","SenhaSIG");
  UsuarioBiblioteca usuarioPergamum;
         try {
             usuarioPergamum = sistema.logar();
-            usuarioPergamum.toString();
+            System.out.println(usuarioPergamum.toString());
         } catch (UsuarioSenhaIncorretosException | IOException | ErroDesconhecidoLoginException ex) {
             System.err.println(ex);
         }
